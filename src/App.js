@@ -10,14 +10,11 @@ function App() {
 
   
   useEffect(() => {
-    console.log('data:', data)
     setData(currentData => {
-      console.log('currentData:', currentData)
       let { ctc, expected, percentage } = currentData;
 
       percentage = (expected - ctc) / ctc * 100;
 
-      console.log('percentage:', percentage)
       return {
         ctc,
         expected,
